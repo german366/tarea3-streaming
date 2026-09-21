@@ -60,7 +60,7 @@ tests/test_assignment.py pruebas provistas por la cátedra (sin modificar)
 tests/test_streaming.py  pruebas agregadas: TestStream, oráculo vs Beam, casos límite
 scripts/make_evidence.py ejecuta el notebook headless y vuelca resultados a evidence/
 evidence/                salidas JSON del oráculo, del pipeline batch, de TestStream,
-                         del sink simulado y el log de pytest
+                         del sink simulado, el log de pytest y capturas del notebook
 data/payments.jsonl      dataset provisto (sin modificar)
 ```
 
@@ -92,6 +92,16 @@ Evidencia en streaming (`evidence/test_stream_panes.json`): para `m-azul 13:00`
 se emite un pane `ON_TIME` con 120 000 cuando el watermark cruza 13:01:00 y
 luego un pane `LATE` acumulativo con 170 000 cuando llega `p-004`. Un duplicado
 enviado después no genera pane alguno.
+
+### Capturas del notebook en ejecución
+
+Totales del pipeline Beam (DirectRunner, batch) coincidiendo con el oráculo:
+
+![Totales del pipeline Beam en Marimo](evidence/notebook-marimo.png)
+
+Panes `ON_TIME` y `LATE` emitidos por el `TestStream`:
+
+![Panes del TestStream en Marimo](evidence/notebook-teststream.png)
 
 ## Decisiones de diseño y trade-offs
 
