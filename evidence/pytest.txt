@@ -1,0 +1,31 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-8.4.2, pluggy-1.6.0 -- /home/german/tarea3-streaming/.venv/bin/python
+rootdir: /home/german/tarea3-streaming
+configfile: pyproject.toml
+plugins: anyio-4.14.2
+collecting ... collected 22 items
+
+tests/test_assignment.py::test_parse_utc_returns_timezone_aware_datetime PASSED [  4%]
+tests/test_assignment.py::test_assign_fixed_window_uses_event_time PASSED [  9%]
+tests/test_assignment.py::test_duplicate_does_not_change_total PASSED    [ 13%]
+tests/test_assignment.py::test_deduplication_is_isolated_by_merchant PASSED [ 18%]
+tests/test_assignment.py::test_stateful_dofn_keeps_keys_isolated PASSED  [ 22%]
+tests/test_assignment.py::test_out_of_order_event_uses_its_event_time_window PASSED [ 27%]
+tests/test_assignment.py::test_late_event_within_tolerance_is_a_revision PASSED [ 31%]
+tests/test_assignment.py::test_event_beyond_lateness_is_audited PASSED   [ 36%]
+tests/test_assignment.py::test_windowed_pipeline_produces_totals PASSED  [ 40%]
+tests/test_assignment.py::test_trigger_policy_has_lateness_and_accumulating_panes PASSED [ 45%]
+tests/test_assignment.py::test_retries_converge_to_one_materialized_entity PASSED [ 50%]
+tests/test_assignment.py::test_append_only_sink_materializes_every_attempt PASSED [ 54%]
+tests/test_assignment.py::test_timer_handler_clears_state PASSED         [ 59%]
+tests/test_streaming.py::test_test_stream_late_event_within_lateness_emits_late_pane PASSED [ 63%]
+tests/test_streaming.py::test_test_stream_late_duplicate_does_not_emit_a_new_pane PASSED [ 68%]
+tests/test_streaming.py::test_test_stream_event_beyond_lateness_is_dropped PASSED [ 72%]
+tests/test_streaming.py::test_batch_pipeline_matches_oracle_with_lateness_policy PASSED [ 77%]
+tests/test_streaming.py::test_batch_pipeline_without_policy_matches_oracle_with_infinite_lateness PASSED [ 81%]
+tests/test_streaming.py::test_oracle_counts_on_default_configuration PASSED [ 86%]
+tests/test_streaming.py::test_parse_utc_rejects_invalid_values PASSED    [ 90%]
+tests/test_streaming.py::test_deduplicate_flag_can_be_disabled PASSED    [ 95%]
+tests/test_streaming.py::test_upsert_sink_with_many_results PASSED       [100%]
+
+============================== 22 passed in 7.00s ==============================

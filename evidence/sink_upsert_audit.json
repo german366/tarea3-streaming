@@ -1,0 +1,74 @@
+[
+  {
+    "attempt": 1,
+    "operation": "UPSERT",
+    "idempotency_key": "m-azul|2026-07-24T13:00:00+00:00",
+    "merchant_id": "m-azul",
+    "window_start": "2026-07-24T13:00:00+00:00",
+    "total": 170000,
+    "materialized_rows": 1
+  },
+  {
+    "attempt": 1,
+    "operation": "UPSERT",
+    "idempotency_key": "m-azul|2026-07-24T13:02:00+00:00",
+    "merchant_id": "m-azul",
+    "window_start": "2026-07-24T13:02:00+00:00",
+    "total": 200000,
+    "materialized_rows": 2
+  },
+  {
+    "attempt": 1,
+    "operation": "UPSERT",
+    "idempotency_key": "m-verde|2026-07-24T13:00:00+00:00",
+    "merchant_id": "m-verde",
+    "window_start": "2026-07-24T13:00:00+00:00",
+    "total": 80000,
+    "materialized_rows": 3
+  },
+  {
+    "attempt": 1,
+    "operation": "UPSERT",
+    "idempotency_key": "m-verde|2026-07-24T13:01:00+00:00",
+    "merchant_id": "m-verde",
+    "window_start": "2026-07-24T13:01:00+00:00",
+    "total": 90000,
+    "materialized_rows": 4
+  },
+  {
+    "attempt": 2,
+    "operation": "UPSERT",
+    "idempotency_key": "m-azul|2026-07-24T13:00:00+00:00",
+    "merchant_id": "m-azul",
+    "window_start": "2026-07-24T13:00:00+00:00",
+    "total": 170000,
+    "materialized_rows": 4
+  },
+  {
+    "attempt": 2,
+    "operation": "UPSERT",
+    "idempotency_key": "m-azul|2026-07-24T13:02:00+00:00",
+    "merchant_id": "m-azul",
+    "window_start": "2026-07-24T13:02:00+00:00",
+    "total": 200000,
+    "materialized_rows": 4
+  },
+  {
+    "attempt": 2,
+    "operation": "UPSERT",
+    "idempotency_key": "m-verde|2026-07-24T13:00:00+00:00",
+    "merchant_id": "m-verde",
+    "window_start": "2026-07-24T13:00:00+00:00",
+    "total": 80000,
+    "materialized_rows": 4
+  },
+  {
+    "attempt": 2,
+    "operation": "UPSERT",
+    "idempotency_key": "m-verde|2026-07-24T13:01:00+00:00",
+    "merchant_id": "m-verde",
+    "window_start": "2026-07-24T13:01:00+00:00",
+    "total": 90000,
+    "materialized_rows": 4
+  }
+]

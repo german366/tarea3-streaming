@@ -14,6 +14,7 @@ RUN uv sync --frozen
 COPY notebook.py ./
 COPY data ./data
 COPY tests ./tests
+COPY scripts ./scripts
 
 RUN useradd --create-home --uid 10001 student \
     && chown -R student:student /app
